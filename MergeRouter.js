@@ -12,7 +12,6 @@ function MegerRouterPlugin(options) {
 }
 
 MegerRouterPlugin.prototype.apply = function (compiler) {
-  // 注册 before-compile 钩子，触发文件合并
   compiler.hooks.emit.tapAsync('before-compile', (compilation, callback) => {
     // 最终生成的文件数据
     const data = {};
